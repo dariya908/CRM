@@ -19,7 +19,7 @@ class DossierModelViewSet(APIView):
         return Response(serializer.data)
 
     def put(self,request,*args,**kwargs):
-        dossier=Dossier.object.get(user=request.user)
+        dossier=Dossier.objects.get(user=request.user)
         serializer=DosierSerializer(dossier,data=request.data)
         if serializer.is_valid():
             serializer.save()
