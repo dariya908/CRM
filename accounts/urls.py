@@ -7,7 +7,7 @@ router.register('register',RegisterViewSet)
 
 urlpatterns = [
     path('',include(router.urls)),
-    path('dossier/',DossierModelViewSet.as_view(),name='Dossier'),
+    path('dossier/',DossierModelViewSet.as_view(),name='dossier'),
     path('login/',AuthView.as_view(),name='login'),
 
 ]
